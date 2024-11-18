@@ -1,10 +1,10 @@
 const express = require('express');
 const dns = require('dns');
-const cors = require('cors');  
+const cors = require('cors');
 const ping = require('ping');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // Use Heroku's provided port or default to 3000
 
 app.use(cors()); // Enable CORS for all routes
 
